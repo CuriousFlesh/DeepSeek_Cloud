@@ -1,0 +1,2 @@
+The model has an inbuild thought procession technique. In which it will also print out it's thought process along with the response to the user.
+I have eliminated this by only print the required stuff (Ignoring the <think> process from html sections).

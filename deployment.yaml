@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deepseek-ollama
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: deepseek
+  template:
+    metadata:
+      labels:
+        app: deepseek
+    spec:
+      containers:
+      - name: deepseek-ollama
+        image: 897729105071.dkr.ecr.ap-south-1.amazonaws.com/deepseek-ollama:latest
+        ports:
+        - containerPort: 11434

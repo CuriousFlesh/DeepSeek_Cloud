@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deepseek-ollama
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deepseek-ollama
+  template:
+    metadata:
+      labels:
+        app: deepseek-ollama
+    spec:
+      containers:
+        - name: deepseek-ollama
+          image: ollama/ollama # Update this if you have a custom Docker image
+          ports:
+            - containerPort: 11434  # Change this if your app runs on a different port
